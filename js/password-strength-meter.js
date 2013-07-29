@@ -3,8 +3,8 @@ function passwordStrength(password1, username, password2) {
 	var shortPass = 1, badPass = 2, goodPass = 3, strongPass = 4, mismatch = 5;
   var symbolSize = 0, natLog, score, complexity = 0, valid = false, options;
 
-  var MIN_COMPLEXITY = 49; // 12 chars with Upper, Lower and Number
-  var MED_COMPLEXITY = 52;
+  var MIN_COMPLEXITY = 40; // 12 chars with Upper, Lower and Number
+  var MED_COMPLEXITY = 45;
 	var MAX_COMPLEXITY = 120; //  25 chars, all charsets
 	var CHARSETS = [
       // Commonly Used
@@ -109,7 +109,7 @@ function passwordStrength(password1, username, password2) {
 
   var defaults = {
     minimumChars: 8,
-    strengthScaleFactor: 1,
+    strengthScaleFactor: 0.9,
     bannedPasswords: COMPLEXIFY_BANLIST,
     banmode: 'strict' // (strict|loose)
   };
@@ -121,6 +121,7 @@ function passwordStrength(password1, username, password2) {
 
   options = jQuery.extend(defaults, options);
 
+console.log( 'Jquery strength');
 
   // password 1 != password 2
   if ( (password1 != password2) && password2.length > 0)
@@ -156,6 +157,8 @@ function passwordStrength(password1, username, password2) {
   // Scale to percentage, so it can be used for a progress bar
   complexity = (complexity / MAX_COMPLEXITY) * 100;
   complexity = (complexity > 100) ? 100 : complexity;
+
+  console.log( 'complexity: ' + complexity );
 
 	if (complexity < MIN_COMPLEXITY )
 		return badPass

@@ -14,8 +14,9 @@ This plugin will replace the password strength indicator with a stronger version
 This plugin will replace the core WordPress password strength indicator with one that takes into
 account a banned list of common passwords
 
-It will also force strong passwords for administrators,
+It will also force strong passwords for administrators, and will not affect the other roles.
 
+This plugin is influenced by the [Force Strong Passwords plugin ](https://github.com/gyrus/Force-Strong-Passwords)
 
 == Installation ==
 
