@@ -18,6 +18,8 @@ It will also force strong passwords for administrators, and will not affect the 
 
 This plugin is influenced by the [Force Strong Passwords plugin ](https://github.com/gyrus/Force-Strong-Passwords)
 
+The next version will look to include expiring passwords for administration level user accounts.
+
 == Installation ==
 
 1. Upload `dg-security` directory to the `/wp-content/plugins/` directory
@@ -32,5 +34,4 @@ This plugin is influenced by the [Force Strong Passwords plugin ](https://github
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
+* First version
